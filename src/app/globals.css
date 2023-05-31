@@ -7,3 +7,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ---------home layout */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+}
