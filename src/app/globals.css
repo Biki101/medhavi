@@ -36,11 +36,11 @@ body {
 .notification-text {
   background-color: #e63946;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   padding: 3px;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  width: 30px;
+  width: 24px;
   margin-left: 2px;
 }

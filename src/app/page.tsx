@@ -2,10 +2,11 @@
 import Image from "next/image";
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
+import ClassPage from "./components/ClassPageComponent/ClassPage";
 
 export default function Home() {
   return (
-    <main className="pt-5 mx-5 ">
+    <main className="pt-5 ml-5 ">
       <div className="home-layout">
         {/* ----------- Logo ---------------- */}
         <div className="h-[100px] flex justify-center items-center">
@@ -25,7 +26,9 @@ export default function Home() {
         <SideBar />
         {/* -------------- SideBar End -------- */}
         {/* -------------- Main Content ------- */}
-        <div className="bg-gray-100">Main Content</div>
+        <div className="bg-gray-100">
+          <ClassPage />
+        </div>
         {/* -------------- Main Content ------- */}
       </div>
     </main>
