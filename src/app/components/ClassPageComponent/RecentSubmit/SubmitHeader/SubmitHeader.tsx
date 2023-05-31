@@ -13,7 +13,7 @@ const SubmitHeader = () => {
           width={50}
           src="/avatar.webp"
           alt="avatar.webp"
-          className="w-[100px] h-[100px]"
+          className="w-[100px] h-[100px] rounded-xl shadow-md shadow-black"
         />
         <div>
           <h1 className="font-semibold">
@@ -34,7 +34,6 @@ const SubmitHeader = () => {
                   cursor: "pointer",
                 }}
               >
-                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                 <Avatar style={{ backgroundColor: "#f56a00" }}>K</Avatar>
                 <Tooltip title="Ant User" placement="top">
                   <Avatar
@@ -64,7 +63,7 @@ const SubmitHeader = () => {
         alt="data-image"
         height={100}
         width={100}
-        className="w-20 h-10"
+        className="w-20 h-10"z
       /> */}
       <span className="flex gap-3 text-[18px] items-center self-start border-[2px] border-green-600 p-1 rounded-full">
         <span className="bg-green-600 text-[16px] p-3 text-white rounded-full">
