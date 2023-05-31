@@ -15,7 +15,7 @@ export default function Home() {
             height={50}
             alt="logo.png"
             src="/logo.png"
-            className="w-full h-[70px] mx-5"
+            className="w-[170px] h-auto mx-5"
           />
         </div>
         {/* --------------Logo End ---------- */}

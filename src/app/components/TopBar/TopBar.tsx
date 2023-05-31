@@ -22,7 +22,7 @@ const TopBar = () => {
         <Image
           width={100}
           height={100}
-          src="/avatar.png"
+          src="/avatar.webp"
           alt="avatar.png"
           className="rounded-full h-[70px] w-[70px]"
         />
