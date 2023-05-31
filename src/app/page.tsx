@@ -1,31 +1,32 @@
 "use client";
 import Image from "next/image";
-import Dashboard from "./components/Dashboard/Dashboard";
 import TopBar from "./components/TopBar/TopBar";
+import SideBar from "./components/SideBar/SideBar";
 
 export default function Home() {
   return (
-    <main className="mt-10 mx-5">
+    <main className="pt-5 mx-5 ">
       <div className="home-layout">
         {/* ----------- Logo ---------------- */}
-        <div className="nav-bar h-[100px] flex justify-center items-center">
-          <Image
+        <div className="h-[100px] flex justify-center items-center">
+          <img
             width={100}
             height={50}
             alt="logo.png"
             src="/logo.png"
-            className="w-full h-[70px]"
+            className="w-full h-[70px] mx-5"
           />
         </div>
         {/* --------------Logo End ---------- */}
         {/* --------------Top Bar ----------- */}
-        <div className="side-bar">
-          <TopBar />
-        </div>
+        <TopBar />
         {/* --------------Top Bar End -------- */}
         {/* --------------Side Bar ------------ */}
-        <div className="main-content">Sidebar</div>
+        <SideBar />
         {/* -------------- SideBar End -------- */}
+        {/* -------------- Main Content ------- */}
+        <div className="bg-gray-100">Main Content</div>
+        {/* -------------- Main Content ------- */}
       </div>
     </main>
   );
