@@ -11,9 +11,9 @@ const SubmitHeader = () => {
         <Image
           height={50}
           width={50}
-          src="/avatar.webp"
+          src="/Avatar.png"
           alt="avatar.webp"
-          className="w-[100px] h-[100px] rounded-xl shadow-md shadow-black"
+          className="w-[70px] h-auto rounded-xl border-2 flex items-center"
         />
         <div>
           <h1 className="font-semibold">
@@ -65,7 +65,7 @@ const SubmitHeader = () => {
         width={100}
         className="w-20 h-10"z
       /> */}
-      <span className="flex gap-3 text-[18px] items-center self-start border-[2px] border-green-600 p-1 rounded-full">
+      <span className="flex gap-3 text-[14px] items-center self-start border-[2px] border-green-600 p-1 rounded-full">
         <span className="bg-green-600 text-[16px] p-3 text-white rounded-full">
           <CgSandClock className=" " />
         </span>

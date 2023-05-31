@@ -6,7 +6,7 @@ import ClassPage from "./components/ClassPageComponent/ClassPage";
 
 export default function Home() {
   return (
-    <main className="pt-5 ml-5 ">
+    <main className="pt-3 ml-5 ">
       <div className="home-layout">
         {/* ----------- Logo ---------------- */}
         <div className="h-[100px] flex justify-center items-center">
