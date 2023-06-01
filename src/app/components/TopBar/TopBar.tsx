@@ -14,7 +14,7 @@ const TopBar = () => {
       <div className="flex items-center gap-5">
         {/* <IoMdNotificationsOutline className="text-[30px] opacity-6" /> */}
         <Image
-          src="/icons/icon/notifications.svg"
+          src="/assets/icon/notifications.svg"
           alt="notification"
           height={25}
           width={25}
