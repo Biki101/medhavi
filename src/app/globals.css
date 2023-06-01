@@ -44,3 +44,18 @@ body {
   width: 24px;
   margin-left: 2px;
 }
+
+/* -----------Scroll Bar ---------------- */
+.scroll-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  /* background-color: gray; */
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: gray;
+}

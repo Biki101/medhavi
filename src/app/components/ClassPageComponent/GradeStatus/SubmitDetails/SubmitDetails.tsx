@@ -8,9 +8,9 @@ const SubmitDetails = ({ image, name, date, schedule }: any) => {
         <Image
           src={image}
           alt="student_image.png"
-          height={50}
-          width={50}
-          className="w-auto h-50"
+          height={64}
+          width={64}
+          className="w-[64px] h-[64px]"
         />
         <div className="flex flex-col">
           <span>{name}</span>

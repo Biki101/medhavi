@@ -8,7 +8,7 @@ const GradeStatus = () => {
       {/* -----------------Grade Status Tob Navigation Bar ----------- */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="bg-[var(--primary-color)] p-4 px-11 text-white rounded-lg">
+          <span className="bg-[var(--primary-color)] p-3 px-12 text-white rounded-lg">
             Not-Graded
           </span>
           <span className="p-4 px-11">Graded</span>
@@ -28,7 +28,7 @@ const GradeStatus = () => {
       {/* -----------------Grade Status Tob Navigation Bar End ----------- */}
 
       {/* ------------------ Submit Details ------------------ */}
-      <div className="flex flex-col gap-4 p-5 overflow-scroll overflow-x-hidden mt-3  h-[350px]">
+      <div className="flex flex-col gap-4 p-5 overflow-auto overflow-x-hidden mt-3  h-[350px] scroll-bar">
         <SubmitDetails
           name="Savannah Nguyen"
           date="October 25, 2019"
