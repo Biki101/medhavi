@@ -1,26 +1,26 @@
 import Image from "next/image";
 import React from "react";
+import ReuseableStudentComponent from "../ReuseableStudentComponent/ReuseableStudentComponent";
 
-const SubmitDetails = ({ image, name, date, schedule }: any) => {
+const SubmitDetails = ({ image, name, date, schedule, graded }: any) => {
   return (
     <div className="flex justify-between">
-      <div className="flex gap-2">
-        <Image
-          src={image}
-          alt="student_image.png"
-          height={64}
-          width={64}
-          className="w-[64px] h-[64px]"
-        />
-        <div className="flex flex-col">
-          <span>{name}</span>
-          <span>{date}</span>
-          <span className="">{schedule}</span>
+      <ReuseableStudentComponent
+        image={image}
+        name={name}
+        date={date}
+        schedule={schedule}
+      />
+      {!graded ? (
+        <span className="bg-[var(--primary-color)] p-5 px-8 h-10 flex items-center justify-center text-white rounded-full">
+          Grade
+        </span>
+      ) : (
+        <div className="flex flex-col bg-green-500 text-white items-center justify-center p-3 px-6 rounded-xl">
+          <span>Graded</span>
+          <span>08/10</span>
         </div>
-      </div>
-      <span className="bg-[var(--primary-color)] p-5 px-8 h-10 flex items-center justify-center text-white rounded-full">
-        Grade
-      </span>
+      )}
     </div>
   );
 };

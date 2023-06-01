@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import SubmitDetails from "./SubmitDetails/SubmitDetails";
+import Graded from "./Graded/Graded";
+import NotGraded from "./Not-Graded/NotGraded";
 
 const GradeStatus = () => {
+  // -------- Application State ----------
+  const [showGraded, setShowGraded] = useState(false);
+  // -------- Application State ----------
+
   return (
     <div className="bg-white m-5 mt-0 p-5 ">
       {/* -----------------Grade Status Tob Navigation Bar ----------- */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="bg-[var(--primary-color)] p-3 px-12 text-white rounded-lg">
+          {/* --------Not Graded --------------- */}
+          <span
+            className={`${
+              showGraded ? "" : "bg-[var(--primary-color)] text-white"
+            }  p-3 px-12  rounded-lg cursor-pointer`}
+            onClick={() => setShowGraded(false)}
+          >
             Not-Graded
           </span>
-          <span className="p-4 px-11">Graded</span>
+          {/* --------Not Graded End--------------- */}
+          {/* -------- Graded --------------- */}
+          <span
+            className={`${
+              showGraded ? "bg-[var(--primary-color)] text-white" : ""
+            }  p-3 px-12  rounded-lg cursor-pointer`}
+            onClick={() => setShowGraded(true)}
+          >
+            Graded
+          </span>
+          {/* -------- Graded End--------------- */}
         </div>
         {/* ---------------Search  Input --------------*/}
         <div className="flex items-center ">
@@ -27,46 +49,7 @@ const GradeStatus = () => {
       </div>
       {/* -----------------Grade Status Tob Navigation Bar End ----------- */}
 
-      {/* ------------------ Submit Details ------------------ */}
-      <div className="flex flex-col gap-4 p-5 overflow-auto overflow-x-hidden mt-3  h-[350px] scroll-bar">
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student1.png"
-        />
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student2.png"
-        />
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student3.png"
-        />
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student4.png"
-        />
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student1.png"
-        />
-        <SubmitDetails
-          name="Savannah Nguyen"
-          date="October 25, 2019"
-          schedule="On time"
-          image="/assets/students/student2.png"
-        />
-      </div>
-      {/* ------------------ Submit Details End ------------------ */}
+      {!showGraded ? <NotGraded /> : <Graded />}
     </div>
   );
 };
