@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import SubmitDetails from "./SubmitDetails/SubmitDetails";
 import Graded from "./Graded/Graded";
 import NotGraded from "./Not-Graded/NotGraded";
 

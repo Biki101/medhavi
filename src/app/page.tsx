@@ -10,7 +10,7 @@ export default function Home() {
       <div className="home-layout">
         {/* ----------- Logo ---------------- */}
         <div className="h-[100px] flex justify-center items-center">
-          <img
+          <Image
             width={100}
             height={50}
             alt="logo.png"

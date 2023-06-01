@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import ReuseableStudentComponent from "../../ReuseableStudentComponent/ReuseableStudentComponent";
-import PptDownloadComponent from "@/app/components/GlobalReuseables/PptDownloadComponent/PptDownloadComponent";
-import GradeButton from "@/app/components/GlobalReuseables/GradeButton/GradeButton";
 import StudentSubmissionDetails from "@/app/components/GlobalReuseables/StudentSubmissionDetails/StudentSubmissionDetails";
 
 const ModalContent = ({ image, name, date, schedule, graded }: any) => {
