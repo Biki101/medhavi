@@ -8,13 +8,9 @@ const SubmitHeader = () => {
   return (
     <div className="flex justify-between">
       <div className="flex gap-3">
-        <Image
-          height={50}
-          width={50}
-          src="/Avatar.png"
-          alt="avatar.webp"
-          className="w-[70px] h-auto rounded-xl border-2 flex items-center"
-        />
+        <span className="w-[70px] h-auto rounded-xl border-2 flex justify-center text-red-400 items-center shadow-md shadow-gray-100">
+          SC
+        </span>
         <div>
           <h1 className="font-semibold">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe,

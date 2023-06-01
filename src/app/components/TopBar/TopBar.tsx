@@ -14,17 +14,18 @@ const TopBar = () => {
       <div className="flex items-center gap-5">
         {/* <IoMdNotificationsOutline className="text-[30px] opacity-6" /> */}
         <Image
-          src="/icons/notifications.png"
+          src="/icons/icon/notifications.svg"
           alt="notification"
           height={25}
           width={25}
+          className="cursor-pointer"
         />
         <Image
-          width={100}
-          height={100}
-          src="/avatar.webp"
+          width={50}
+          height={50}
+          src="/assets/Ellipse5.png"
           alt="avatar.png"
-          className="rounded-full h-[70px] w-[70px]"
+          className="rounded-full h-[40px] w-[40px]"
         />
       </div>
     </div>

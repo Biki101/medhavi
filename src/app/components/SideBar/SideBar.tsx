@@ -9,7 +9,7 @@ const SideBar = () => {
         {/*--------- Dashboard ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/dashboard.png"
+            src="/assets/icon/dashboard.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -20,7 +20,7 @@ const SideBar = () => {
         {/*--------- Class ------------*/}
         <div className="sidebar-component bg-[var(--primary-color)] text-white">
           <Image
-            src="/icons/class_icon.png"
+            src="/assets/icon/Class.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -31,7 +31,7 @@ const SideBar = () => {
         {/*--------- Attendance ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/attendence.png"
+            src="/assets/icon/attendence.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -43,19 +43,13 @@ const SideBar = () => {
         <div className="sidebar-component  justify-between">
           <div className="flex items-center gap-[20px]">
             <Image
-              src="/icons/test.png"
+              src="/assets/icon/test.svg"
               alt="class-icon"
               height={18}
               width={18}
             />
             <span>Test</span>
           </div>
-          <Image
-            src="/icons/class_icon.png"
-            alt="class-icon"
-            height={18}
-            width={18}
-          />
           <BsChevronRight />
         </div>
         {/* --------- Test End --------- */}
@@ -63,7 +57,7 @@ const SideBar = () => {
         <div className="sidebar-component justify-between">
           <div className="flex  items-center gap-[20px]">
             <Image
-              src="/icons/report.png"
+              src="/assets/icon/report.svg"
               alt="class-icon"
               height={18}
               width={18}
@@ -76,7 +70,7 @@ const SideBar = () => {
         {/*--------- Discipline ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/Discipline.png"
+            src="/assets/icon/Discipline.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -87,7 +81,7 @@ const SideBar = () => {
         {/*--------- Doubts ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/doubt.png"
+            src="/assets/icon/doubt.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -98,7 +92,7 @@ const SideBar = () => {
         {/*--------- Messages ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/Messages.png"
+            src="/assets/icon/Messages.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -111,7 +105,7 @@ const SideBar = () => {
         {/*--------- Schedule ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/calendar.png"
+            src="/assets/icon/calendar.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -122,7 +116,7 @@ const SideBar = () => {
         {/*--------- Notify ------------*/}
         <div className="sidebar-component">
           <Image
-            src="/icons/notify.png"
+            src="/assets/icon/notify.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -136,7 +130,7 @@ const SideBar = () => {
       <div>
         <div className="sidebar-component">
           <Image
-            src="/icons/setting.png"
+            src="/assets/icon/setting.svg"
             alt="class-icon"
             height={18}
             width={18}
@@ -147,7 +141,7 @@ const SideBar = () => {
         </div>
         <div className="sidebar-component">
           <Image
-            src="/icons/logout.png"
+            src="/assets/icon/logout.svg"
             alt="class-icon"
             height={18}
             width={18}
