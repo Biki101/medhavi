@@ -41,6 +41,7 @@ const SubmitDetails = ({ image, name, date, schedule, graded }: any) => {
           name={name}
           date={date}
           schedule={schedule}
+          graded={graded}
         />
       </Modal>
       {/* -------------Modal Start End ------------------- */}
@@ -52,13 +53,16 @@ const SubmitDetails = ({ image, name, date, schedule, graded }: any) => {
       />
       {!graded ? (
         <span
-          className="bg-[var(--primary-color)] p-5 px-8 h-10 flex items-center justify-center text-white rounded-full"
+          className="bg-[var(--primary-color)] p-5 px-8 h-10 flex items-center justify-center text-white rounded-full cursor-pointer"
           onClick={showModal}
         >
           Grade
         </span>
       ) : (
-        <div className="flex flex-col bg-green-500 text-white items-center justify-center p-3 px-6 rounded-xl">
+        <div
+          className="flex flex-col bg-green-500 text-white items-center justify-center p-3 px-6 rounded-xl cursor-pointer"
+          onClick={showModal}
+        >
           <span>Graded</span>
           <span>08/10</span>
         </div>

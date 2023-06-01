@@ -1,39 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import ReuseableStudentComponent from "../../ReuseableStudentComponent/ReuseableStudentComponent";
 import PptDownloadComponent from "@/app/components/GlobalReuseables/PptDownloadComponent/PptDownloadComponent";
 import GradeButton from "@/app/components/GlobalReuseables/GradeButton/GradeButton";
+import StudentSubmissionDetails from "@/app/components/GlobalReuseables/StudentSubmissionDetails/StudentSubmissionDetails";
 
 const ModalContent = ({ image, name, date, schedule, graded }: any) => {
+  // ----------------- Application State -----------
+  const [editMode, setEditMode] = useState(graded);
+  // ----------------- Application State End -----------
   return (
     <div className="border-t-[1px] border-black border-opacity-10 pt-5 flex flex-col gap-3 mb-10">
-      {/* -------------Student and Submission Details */}
-      <ReuseableStudentComponent
+      {/* ----------Submission Details ----------- */}
+      <StudentSubmissionDetails
         image={image}
         name={name}
         date={date}
         schedule={schedule}
       />
-      {/* -------------Student and Submission Details */}
-
-      {/* ------------Files ---------------------- */}
-      <p className="opacity-title mt-3">Submitted files</p>
-      <div className="flex gap-3">
-        <PptDownloadComponent />
-        <PptDownloadComponent />
-      </div>
-      {/* ------------Files End ---------------------- */}
-
-      {/* ------------Comment ------------- */}
-      <p className="opacity-title">Student Comment</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-        voluptatum eveniet doloremque blanditiis quos fugiat expedita. Magnam,
-        explicabo eos at placeat ducimus fugit esse! Suscipit ab autem nostrum
-        expedita placeat. Lorem ipsum dolor sit amet consectetur, adipisicing
-        elit. Cupiditate placeat eligendi incidunt totam consequatur nulla
-        pariatur quo, error architecto eaque.
-      </p>
-      {/* ------------Comment End ------------- */}
+      {/* ----------Submission Details End ----------- */}
 
       {/* -----------Grade Obtained ---------- */}
       <p className="opacity-title">Grade obtained:</p>
@@ -42,8 +26,11 @@ const ModalContent = ({ image, name, date, schedule, graded }: any) => {
           type="text"
           placeholder="Enter grade here"
           className="border-b-[2px] border-black text-center w-[200px] p-4 outline-none"
+          disabled={editMode}
+          defaultValue={editMode ? "08" : ""}
+          maxLength={2}
         />
-        <span className="p-7 bg-gray-100 ml-5 rounded-md">out of 10</span>
+        <span className="p-5 bg-gray-100 ml-5 rounded-md">out of 10</span>
       </div>
       {/* -----------Grade Obtained End ---------- */}
 
@@ -51,12 +38,18 @@ const ModalContent = ({ image, name, date, schedule, graded }: any) => {
       <textarea
         className="textarea bg-gray-100 rounded-md p-4 outline-none h-[170px]"
         placeholder="Enter text..."
+        disabled={editMode}
       />
       {/* ------------Suggestion End------------- */}
 
       <div className="flex items-center gap-10  self-end mt-10">
         <span className="text-red-600">Ask for Resubmission</span>
-        <GradeButton />
+        <div
+          className="bg-[var(--primary-color)] p-5 px-8 h-10 flex items-center justify-center text-white rounded-full w-[150px] cursor-pointer"
+          onClick={() => setEditMode(false)}
+        >
+          {graded ? "Edit Grade" : "grade"}
+        </div>
       </div>
     </div>
   );
